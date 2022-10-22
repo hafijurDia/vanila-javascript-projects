@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.7.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        /*
+=============== 
+About
+===============
+*/
+.section{
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.title {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+.title p {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.about-img {
+  margin-bottom: 2rem;
+}
+.about-img img {
+  border-radius: var(--radius);
+  object-fit: cover;
+  height: 20rem;
+}
+@media screen and (min-width: 992px) {
+  .about-img {
+    margin-bottom: 0;
+  }
+
+  .about-center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+  }
+}
+.about {
+  background: var(--clr-white);
+  border-radius: var(--radius);
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.btn-container {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 0px;
+}
+.tab-btn:nth-child(1) {
+  border-top-left-radius: var(--radius);
+}
+.tab-btn:nth-child(3) {
+  border-top-right-radius: var(--radius);
+}
+.tab-btn {
+  padding: 1rem 0;
+  border: none;
+  text-transform: capitalize;
+  font-size: 1rem;
+  display: block;
+  background: var(--clr-grey-9);
+  cursor: pointer;
+  transition: var(--transition);
+  letter-spacing: var(--spacing);
+}
+.tab-btn:hover:not(.active) {
+  background: var(--clr-primary-10);
+  color: var(--clr-primary-5);
+}
+.about-content {
+  border-bottom-left-radius: var(--radius);
+  border-bottom-right-radius: var(--radius);
+  padding: 2rem 1.5rem;
+}
+/* hide content */
+.content {
+  display: none;
+}
+.tab-btn.active {
+  background: var(--clr-white);
+}
+.content.active {
+  display: block;
+}
+
+    </style>
+
+    <title>Tab</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">Javascript Practise</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="simple.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Projects
+                </a>
+                <ul class="dropdown-menu" id="dropdown-menu" aria-labelledby="navbarDropdown">
+                  
+                </ul>
+
+              </li>
+           
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <section class="section">
+        <div class="title">
+          <h2>about</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum,
+            aperiam!
+          </p>
+        </div>
+  
+        <div class="about-center section-center">
+          <article class="about-img">
+            <img src="https://vannilla-js-basic-project-11-tabs.netlify.app/hero-bcg.jpeg" alt="" />
+          </article>
+          <article class="about">
+            <!-- btn container -->
+            <div class="btn-container">
+              <button class="tab-btn active" data-id="history">history</button>
+              <button class="tab-btn" data-id="vision">vision</button>
+              <button class="tab-btn" data-id="goals">goals</button>
+            </div>
+            <div class="about-content">
+              <!-- single item -->
+              <div class="content active" id="history">
+                <h4>history</h4>
+                <p>
+                  I'm baby wolf pickled schlitz try-hard normcore marfa man bun
+                  mumblecore vice pop-up XOXO lomo kombucha glossier bicycle
+                  rights. Umami kinfolk salvia jean shorts offal venmo. Knausgaard
+                  tilde try-hard, woke fixie banjo man bun. Small batch tumeric
+                  mustache tbh wayfarers 8-bit shaman chartreuse tacos. Viral
+                  direct trade hoodie ugh chambray, craft beer pork belly flannel
+                  tacos single-origin coffee art party migas plaid pop-up.
+                </p>
+              </div>
+              <!-- end of single item -->
+              <!-- single item -->
+              <div class="content" id="vision">
+                <h4>vision</h4>
+                <p>
+                  Man bun PBR&B keytar copper mug prism, hell of helvetica. Synth
+                  crucifix offal deep v hella biodiesel. Church-key listicle
+                  polaroid put a bird on it chillwave palo santo enamel pin,
+                  tattooed meggings franzen la croix cray. Retro yr aesthetic four
+                  loko tbh helvetica air plant, neutra palo santo tofu mumblecore.
+                  Hoodie bushwick pour-over jean shorts chartreuse shabby chic.
+                  Roof party hammock master cleanse pop-up truffaut, bicycle
+                  rights skateboard affogato readymade sustainable deep v
+                  live-edge schlitz narwhal.
+                </p>
+                <ul>
+                  <li>list item</li>
+                  <li>list item</li>
+                  <li>list item</li>
+                </ul>
+              </div>
+              <!-- end of single item -->
+              <!-- single item -->
+              <div class="content" id="goals">
+                <h4>goals</h4>
+                <p>
+                  Chambray authentic truffaut, kickstarter brunch taxidermy vape
+                  heirloom four dollar toast raclette shoreditch church-key.
+                  Poutine etsy tote bag, cred fingerstache leggings cornhole
+                  everyday carry blog gastropub. Brunch biodiesel sartorial mlkshk
+                  swag, mixtape hashtag marfa readymade direct trade man braid
+                  cold-pressed roof party. Small batch adaptogen coloring book
+                  heirloom. Letterpress food truck hammock literally hell of wolf
+                  beard adaptogen everyday carry. Dreamcatcher pitchfork yuccie,
+                  banh mi salvia venmo photo booth quinoa chicharrones.
+                </p>
+              </div>
+              <!-- end of single item -->
+            </div>
+          </article>
+        </div>
+      </section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+<script src="js/tab.js"></script>
+<script src="js/navbar.js"></script>
+</body>
+</html>
